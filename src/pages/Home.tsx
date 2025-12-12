@@ -1,6 +1,7 @@
 import { ChevronDown, Target, Users, Zap, Gauge, Wind, Weight } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Link } from 'react-router-dom';
+import heroBg from '../assets/hero-background.jpg';
 
 function HeroSection() {
   const scrollToAbout = () => {
@@ -14,7 +15,7 @@ function HeroSection() {
     <section className="relative h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0f]">
       <div className="absolute inset-0 z-0">
         <ImageWithFallback
-          src="/src/assets/hero-background.jpg"
+          src={heroBg}
           alt="F1 Racing"
           className="w-full h-full object-cover"
         />
