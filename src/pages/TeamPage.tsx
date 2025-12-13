@@ -41,7 +41,7 @@ export function TeamPage() {
   ];
 
   return (
-    <section className="py-24 px-4 bg-gradient-to-b from-[#0a0a0f] to-[#121218] relative overflow-hidden">
+    <section className="py-24 px-4 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
       {/* Decorative gradients */}
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"></div>
@@ -50,7 +50,7 @@ export function TeamPage() {
         <div className="text-center mb-16">
           <h2 className="text-5xl mb-6 text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-fuchsia-400">Nuestro Equipo</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-fuchsia-500 mx-auto mb-8"></div>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             Un grupo diverso de alumnas apasionadas por la ingeniería, el diseño y la innovación. 
             Juntas formamos Colibrí Racing.
           </p>
@@ -60,7 +60,7 @@ export function TeamPage() {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="group bg-gradient-to-br from-[#16161d] to-[#1e1e2e] rounded-xl overflow-hidden border border-white/10 hover:border-cyan-500/50 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all"
+              className="group bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl overflow-hidden border border-gray-200 hover:border-cyan-500/50 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all"
             >
               <div className="relative h-80 overflow-hidden bg-gradient-to-br from-emerald-500/20 via-cyan-500/20 to-fuchsia-500/20">
                 <ImageWithFallback
@@ -68,13 +68,13 @@ export function TeamPage() {
                   alt={member.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-[#0a0a0f]/50 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-transparent"></div>
               </div>
               
               <div className="p-6">
-                <h3 className="text-2xl mb-2 text-white">{member.name}</h3>
+                <h3 className="text-2xl mb-2 text-black">{member.name}</h3>
                 <p className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400 mb-4">{member.role}</p>
-                <p className="text-gray-400">{member.description}</p>
+                <p className="text-gray-500">{member.description}</p>
               </div>
             </div>
           ))}
