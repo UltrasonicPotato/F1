@@ -17,11 +17,11 @@ export function Navbar() {
 
   const navItems = [
     { label: 'Inicio', to: '/' },
-    { label: 'Sobre Nosotras', to: '/about' },
-    { label: 'El Equipo', to: '/team' },
-    { label: 'El Coche', to: '/car' },
+    { label: 'Sobre nosotras', to: '/about' },
+    { label: 'Equipo', to: '/team' },
+    { label: 'Coche', to: '/car' },
     { label: 'Patrocinadores', to: '/sponsors' },
-    { label: 'Contacto', to: '/contact' },
+    { label: 'Contáctanos', to: '/contact' },
   ];
 
   return (

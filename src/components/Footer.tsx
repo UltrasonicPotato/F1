@@ -21,16 +21,16 @@ export function Footer() {
             <h4 className="mb-4 text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Enlaces Rápidos</h4>
             <ul className="space-y-2 text-gray-500">
               <li>
-                <a href="#home" className="hover:text-cyan-400 transition-colors">Inicio</a>
+                <a href="/" className="hover:text-cyan-400 transition-colors">Inicio</a>
               </li>
               <li>
-                <a href="#about" className="hover:text-cyan-400 transition-colors">Sobre Nosotras</a>
+                <a href="/about" className="hover:text-cyan-400 transition-colors">Sobre nosotras</a>
               </li>
               <li>
-                <a href="#team" className="hover:text-cyan-400 transition-colors">El Equipo</a>
+                <a href="/team" className="hover:text-cyan-400 transition-colors">Equipo</a>
               </li>
               <li>
-                <a href="#car" className="hover:text-cyan-400 transition-colors">El Coche</a>
+                <a href="/car" className="hover:text-cyan-400 transition-colors">Coche</a>
               </li>
             </ul>
           </div>
