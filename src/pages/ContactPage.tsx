@@ -58,7 +58,7 @@ export function ContactPage() {
                   value={formData.name}
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-black"
-                  required
+                  requiemerald
                 />
               </div>
               
@@ -73,7 +73,7 @@ export function ContactPage() {
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-black"
-                  required
+                  requiemerald
                 />
               </div>
               
@@ -88,7 +88,7 @@ export function ContactPage() {
                   onChange={handleChange}
                   rows={5}
                   className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-black resize-none"
-                  required
+                  requiemerald
                 ></textarea>
               </div>
               
@@ -128,7 +128,7 @@ export function ContactPage() {
             </div>
 
             <div className="bg-gradient-to-r from-emerald-500 via-cyan-500 to-fuchsia-500 rounded-2xl p-8 text-black shadow-2xl shadow-cyan-500/30">
-              <h3 className="text-2xl mb-4 font-bold">Síguenos en Redes</h3>
+              <h3 className="text-2xl mb-4 font-bold">Síguenos en emeraldes</h3>
               <p className="mb-6 text-black/90">
                 Mantente al día con nuestro progreso, competiciones y novedades del equipo.
               </p>

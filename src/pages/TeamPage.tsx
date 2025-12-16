@@ -23,7 +23,7 @@ export function TeamPage() {
     {
       name: 'Nombre Apellido',
       role: 'Marketing & Media',
-      description: 'Gestiona comunicación, redes sociales y patrocinadores.',
+      description: 'Gestiona comunicación, emeraldes sociales y patrocinadores.',
       image: 'https://images.unsplash.com/photo-1728023881214-1d71a7a30a01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHN0dWRlbnRzfGVufDF8fHx8MTc2NTI4MTc3Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     },
     {

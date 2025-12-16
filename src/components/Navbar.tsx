@@ -35,7 +35,7 @@ export function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
             <img src={logo} alt="Colibrí Racing Logo" className="h-14 w-auto" />
-            <span className="text-2xl text-black font-bold" style={{ fontFamily: 'Orbitron, sans-serif' }}>Colibrí Racing</span>
+            <span className={`text-2xl font-bold ${isScrolled ? 'text-black' : 'text-white'}`} style={{ fontFamily: 'Orbitron, sans-serif' }}>Colibrí Racing</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -44,7 +44,9 @@ export function Navbar() {
               <Link
                 key={item.label}
                 to={item.to}
-                className="text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-emerald-400 hover:to-cyan-400 transition-all"
+                className={`transition-all ${
+                  isScrolled ? 'text-gray-700' : 'text-white'
+                } hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-emerald-400 hover:to-cyan-400`}
               >
                 {item.label}
               </Link>
@@ -54,7 +56,7 @@ export function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-gray-700"
+            className={`md:hidden p-2 ${isScrolled ? 'text-gray-700' : 'text-white'}`}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -68,7 +70,9 @@ export function Navbar() {
                 key={item.label}
                 to={item.to}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-gray-100 hover:text-cyan-400 transition-colors"
+                className={`block w-full text-left px-4 py-3 transition-colors ${
+                  isScrolled ? 'text-gray-700' : 'text-white'
+                } hover:bg-gray-100 hover:text-cyan-400`}
               >
                 {item.label}
               </Link>
