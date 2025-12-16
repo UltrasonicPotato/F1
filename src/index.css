@@ -1686,7 +1686,7 @@
   --card-foreground: #f0f0f5;
   --popover: #16161d;
   --popover-foreground: #f0f0f5;
-  --primary: #06b6d4;
+  --primary: #CC5A4A;
   --primary-foreground: #0a0a0f;
   --secondary: #1e1e2e;
   --secondary-foreground: #f0f0f5;
@@ -1694,7 +1694,7 @@
   --muted-foreground: #9ca3af;
   --accent: #2d2d3f;
   --accent-foreground: #f0f0f5;
-  --destructive: #d4183d;
+  --destructive: #FBD9A6;
   --destructive-foreground: #fff;
   --border: #ffffff1a;
   --input: transparent;
@@ -1702,7 +1702,7 @@
   --switch-background: #2d2d3f;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: #06b6d4;
+  --ring: #CC5A4A;
   --chart-1: oklch(.646 .222 41.116);
   --chart-2: oklch(.6 .118 184.704);
   --chart-3: oklch(.398 .07 227.392);
