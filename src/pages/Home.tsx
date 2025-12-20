@@ -24,7 +24,7 @@ function HeroSection() {
       </div>
       <div className="relative z-10 text-center text-black px-4 max-w-5xl mx-auto">
         <div className="mb-6">
-          <div className="inline-block px-6 py-2 from-[#f87171] to-[#fb923c] border border-[#fb923c]/30 rounded-full mb-8">
+          <div className="inline-block px-6 py-2 bg-gradient-to-r from-[#f87171] to-[#fb923c] border border-[#fb923c]/30 rounded-full mb-8">
             <span className="text-black" >F1 IN SCHOOLS - CATEGORÍA PROFESIONAL</span>
           </div>
         </div>

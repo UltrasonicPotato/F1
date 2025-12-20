@@ -1,4 +1,4 @@
-import logo from '../assets/logo.png';
+import blackLogo from '../../test2/black.logo.png';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,7 +9,7 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <img src={logo} alt="Colibrí Racing Logo" className="h-10 w-auto" />
+              <img src={blackLogo} alt="Colibrí Racing Logo" className="h-10 w-auto" />
               <span className="text-xl" style={{ fontFamily: 'Orbitron, sans-serif' }}>Colibrí Racing</span>
             </div>
             <p className="text-gray-500">
