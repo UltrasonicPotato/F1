@@ -41,13 +41,12 @@ export function SponsorsPage() {
 
         {/* Become a Sponsor */}
         <div className="bg-gradient-to-r from-emerald-500 via-cyan-500 to-fuchsia-500 rounded-2xl p-12 text-black text-center shadow-2xl shadow-cyan-500/30">
-          <Heart className="mx-auto mb-6" size={48} />
-          <h3 className="text-3xl mb-4 font-bold">¿Quieres ser nuestro patrocinador?</h3>
-          <p className="text-xl mb-8 text-black/90 max-w-2xl mx-auto">
-            Únete a nosotras en esta aventura y apoya el futuro de la ingeniería española. 
-            Ofrecemos diferentes niveles de patrocinio adaptados a tus necesidades.
-          </p>
-          <Link
+          <Heart className="mx-auto mb-6 text-white" size={48} />
+          <h3 className="text-3xl mb-4 font-bold text-white">¿Quieres ser nuestro patrocinador?</h3>
+                    <p className="text-xl mb-8 text-white max-w-2xl mx-auto">
+                      Únete a nosotras en esta aventura y apoya el futuro de la ingeniería española.
+                      Ofrecemos diferentes niveles de patrocinio adaptados a tus necesidades.
+                    </p>          <Link
             to="/contact"
             className="px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-gray-100 transition-colors shadow-lg font-medium inline-flex items-center justify-center"
           >

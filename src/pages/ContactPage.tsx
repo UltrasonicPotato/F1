@@ -58,7 +58,7 @@ export function ContactPage() {
                   value={formData.name}
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-black"
-                  requiemerald
+                  required
                 />
               </div>
               
@@ -73,7 +73,7 @@ export function ContactPage() {
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-black"
-                  requiemerald
+                  required
                 />
               </div>
               
@@ -88,13 +88,13 @@ export function ContactPage() {
                   onChange={handleChange}
                   rows={5}
                   className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-black resize-none"
-                  requiemerald
+                  required
                 ></textarea>
               </div>
               
               <button
                 type="submit"
-                className="w-full px-8 py-4 bg-gradient-to-r from-emerald-500 via-cyan-500 to-fuchsia-500 hover:from-emerald-600 hover:via-cyan-600 hover:to-fuchsia-600 text-black rounded-lg transition-all shadow-lg shadow-cyan-500/30"
+                className="w-full px-8 py-4 bg-gradient-to-r from-emerald-500 via-cyan-500 to-fuchsia-500 hover:from-emerald-600 hover:via-cyan-600 hover:to-fuchsia-600 text-white rounded-lg transition-all shadow-lg shadow-cyan-500/30"
               >
                 Enviar Mensaje
               </button>
@@ -128,8 +128,8 @@ export function ContactPage() {
             </div>
 
             <div className="bg-gradient-to-r from-emerald-500 via-cyan-500 to-fuchsia-500 rounded-2xl p-8 text-black shadow-2xl shadow-cyan-500/30">
-              <h3 className="text-2xl mb-4 font-bold">Síguenos en emeraldes</h3>
-              <p className="mb-6 text-black/90">
+              <h3 className="text-2xl mb-4 font-bold text-white">Síguenos en redes</h3>
+              <p className="mb-6 text-white">
                 Mantente al día con nuestro progreso, competiciones y novedades del equipo.
               </p>
               <div className="flex gap-4">
@@ -137,7 +137,7 @@ export function ContactPage() {
                   href="https://instagram.com/colibri.racingf1"
                   className="w-12 h-12 bg-gray-200 hover:bg-gray-300 backdrop-blur-sm rounded-lg flex items-center justify-center transition-colors"
                 >
-                  <Instagram size={20} />
+                  <Instagram size={20} className="text-white" />
                 </a>
               </div>
             </div>
