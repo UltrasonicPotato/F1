@@ -28,7 +28,7 @@ export function AboutPage() {
   ];
 
   return (
-    <section className="py-24 px-4 bg-white relative overflow-hidden">
+    <section id="about-hero" className="py-24 px-4 bg-white relative overflow-hidden">
       <ImageWithFallback
         src={aboutBg}
         alt="About background"
@@ -50,7 +50,7 @@ export function AboutPage() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div id="about-values" className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {values.map((value, index) => {
             const Icon = value.icon;
             return (

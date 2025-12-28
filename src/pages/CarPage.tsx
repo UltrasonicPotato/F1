@@ -46,10 +46,25 @@ export function CarPage() {
         {/* Car Image */}
         <div className="mb-16 rounded-2xl overflow-hidden border border-gray-200 shadow-2xl shadow-cyan-500/20">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1760012827122-2b467fa76d38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZXJvZHluYW1pYyUyMGRlc2lnbiUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzY1MzgwOTg3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            src="https://images.unsplash.com/photo-1760012827122-2b467fa76d38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZXJvZHluYmmyUyMGRlc2lnbiUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzY1MzgwOTg3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
             alt="Colibrí Racing Car"
             className="w-full h-[500px] object-cover"
           />
+        </div>
+
+        {/* Development Process */}
+        <div className="mt-16 mb-16 bg-gradient-to-r from-emerald-500 via-cyan-500 to-fuchsia-500 rounded-2xl p-12 text-white shadow-2xl shadow-cyan-500/30">
+          <h3 className="text-3xl mb-8 text-center text-white">Proceso de Desarrollo</h3>
+          <div className="grid md:grid-cols-5 gap-6">
+            {['Investigación', 'Diseño CAD', 'Simulación CFD', 'Fabricación', 'Testing'].map((step, index) => (
+              <div key={index} className="text-center">
+                <div className="w-12 h-12 bg-gray-200 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold">{index + 1}</span>
+                </div>
+                <p className="font-medium text-white">{step}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Specifications */}
@@ -87,21 +102,6 @@ export function CarPage() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Development Process */}
-        <div className="mt-16 bg-gradient-to-r from-emerald-500 via-cyan-500 to-fuchsia-500 rounded-2xl p-12 text-black shadow-2xl shadow-cyan-500/30">
-          <h3 className="text-3xl mb-8 text-center">Proceso de Desarrollo</h3>
-          <div className="grid md:grid-cols-5 gap-6">
-            {['Investigación', 'Diseño CAD', 'Simulación CFD', 'Fabricación', 'Testing'].map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="w-12 h-12 bg-gray-200 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold">{index + 1}</span>
-                </div>
-                <p className="font-medium">{step}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
