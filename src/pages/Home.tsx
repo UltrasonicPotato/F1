@@ -2,6 +2,7 @@ import { ChevronDown, Target, Users, Zap, Gauge, Wind, Weight } from 'lucide-rea
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Link } from 'react-router-dom';
 import heroBg from '../../test2/car.png';
+import colibriLogo from '../assets/colibri.colored.logo.jpg';
 
 function HeroSection() {
   const scrollToAbout = () => {
@@ -12,7 +13,7 @@ function HeroSection() {
   };
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-white">
+    <section id="hero-section" className="relative h-screen flex items-center justify-center overflow-hidden bg-white">
       <div className="absolute inset-0 z-0">
         <ImageWithFallback
           src={heroBg}
@@ -65,7 +66,7 @@ function AboutSummary() {
     <section id="about-summary" className="py-24 px-4 bg-white text-black">
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div className="text-center">
-          <img src="../../test3/colibri.logo.color.png" alt="Colibrí Racing Logo" className="mx-auto" />
+          <img src={colibriLogo} alt="Colibrí Racing Logo" className="mx-auto" />
         </div>
         <div className="text-center md:text-left">
           <h2 className="text-4xl md:text-5xl mb-6 text-black">Sobre Nosotros</h2>
@@ -92,7 +93,7 @@ function TeamSummary() {
   ];
 
   return (
-    <section className="py-24 px-4 bg-gray-50 text-black">
+    <section id="team-summary" className="py-24 px-4 bg-gray-50 text-black">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl mb-6 text-black">Nuestro Equipo</h2>
         <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-12">
@@ -122,7 +123,7 @@ function CarSummary() {
   ];
 
   return (
-    <section className="py-24 px-4 bg-white text-black">
+    <section id="car-summary" className="py-24 px-4 bg-white text-black">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div className="text-center md:text-left">
           <h2 className="text-4xl md:text-5xl mb-6 text-black">Nuestro Coche</h2>
@@ -161,7 +162,7 @@ function SponsorsSummary() {
   ];
 
   return (
-    <section className="py-24 px-4 bg-gray-50 text-black">
+    <section id="sponsors-summary" className="py-24 px-4 bg-gray-50 text-black">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl mb-6 text-black">Nuestros Patrocinadores</h2>
         <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-12">

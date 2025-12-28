@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import whiteLogo from '../../test2/white.logo.png';
 import blackLogo from '../../test2/black.logo.png';
 
-export function Navbar() {
+export function Navbar({ textColor }: { textColor: string }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { pathname } = useLocation();
@@ -17,10 +17,9 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const isTransparentPage = pathname === '/' || pathname === '/about';
-  const textColor = isTransparentPage && !isScrolled ? 'text-white' : 'text-gray-700';
-  const logoTextColor = isTransparentPage && !isScrolled ? 'text-white' : 'text-black';
-  const logo = isTransparentPage && !isScrolled ? whiteLogo : blackLogo;
+  
+  const logo = textColor === 'text-white' ? whiteLogo : blackLogo;
+  const logoTextColor = textColor;
 
   const navItems = [
     { label: 'Inicio', to: '/' },
@@ -34,7 +33,7 @@ export function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled || !isTransparentPage ? 'bg-white/95 backdrop-blur-md shadow-lg shadow-gray-500/10' : 'bg-transparent'
+        isScrolled || textColor !== 'text-white' ? 'bg-white/95 backdrop-blur-md shadow-lg shadow-gray-500/10' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -69,7 +68,7 @@ export function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className={`md:hidden py-4 border-t ${isScrolled || !isTransparentPage ? 'border-gray-200' : 'border-gray-700'}`}>
+          <div className={`md:hidden py-4 border-t ${isScrolled || textColor !== 'text-white' ? 'border-gray-200' : 'border-gray-700'}`}>
             {navItems.map((item) => (
               <Link
                 key={item.label}
