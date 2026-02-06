@@ -6,24 +6,24 @@ import aboutBg from '../assets/about-bg.jpg';
 export function AboutPage() {
   const values = [
     {
-      icon: Target,
-      title: 'Nuestra Misión',
-      description: 'Impulsar la innovación en ingeniería y diseño, demostrando que la pasión y el trabajo en equipo pueden llevarnos a la excelencia.',
+      icon: Users,
+      title: 'Trabajo en equipo',
+      description: 'Nada es más importante que el trabajo en equipo para alcanzar los mejores resultados y objetivos posibles. El equipo es la unidad de todos los miembros del equipo con sus diferentes ideas, habilidades y opiniones, por lo tanto, es esencial trabajar juntos en armonía.',
     },
     {
       icon: Award,
-      title: 'Excelencia',
-      description: 'Comprometidas con los más altos estándares en diseño aerodinámico, fabricación y presentación profesional.',
-    },
-    {
-      icon: Users,
-      title: 'Trabajo en Equipo',
-      description: 'La colaboración y el apoyo mutuo son el motor que impulsa cada decisión y cada logro del equipo Colibrí.',
+      title: 'Compromiso y fiabilidad',
+      description: 'El compromiso implica confiabilidad, esfuerzo y constancia. Con estas cualidades podemos crear lo que queramos, ya que la resiliencia y la perseverancia nos permitirán superar cualquier obstáculo.',
     },
     {
       icon: Zap,
+      title: 'Pasión',
+      description: 'La pasión es algo que es simplemente esencial e indispensable, es la esencia del proyecto. Con pasión lo que hacemos se convierte en un trabajo divertido, entretenido, fascinante y cautivador que, a pesar de ser duro y exigente, es algo que nos apasiona.',
+    },
+    {
+      icon: Target,
       title: 'Innovación',
-      description: 'Aplicamos tecnología de vanguardia y pensamiento creativo para optimizar cada aspecto de nuestro diseño.',
+      description: 'La innovación requiere escuchar todas las diferentes ideas de cada miembro dándoles a todas el mismo valor, aceptar diversos puntos de vista y aprender de los errores. Colaborar para desarrollar algo creativo, sostenible y nuevo.',
     },
   ];
 
@@ -41,12 +41,10 @@ export function AboutPage() {
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-5xl mb-6 text-white">Sobre nosotros</h2>
+          <h2 className="text-5xl mb-6 text-white">Sobre nosotras</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-fuchsia-500 mx-auto mb-8"></div>
           <p className="text-xl text-white max-w-3xl mx-auto">
-            Somos un equipo de alumnas españolas apasionadas por la ingeniería y la competición. 
-            Participamos en F1 in Schools, donde diseñamos, fabricamos y competimos con coches en miniatura 
-            impulsados por cartuchos de CO₂, demostrando que la innovación no tiene límites.
+            Somos un equipo de 6 alumnas unidas por nuestra pasión por la ingeniería, la aerodinámica y los coches. Participamos en STEM racing, un proyecto que nos ha motivado a crear el coche más rápido e innovador posible. Estamos deseando dar el primer paso en nuestro viaje: la Competición Regional. Estos son los valores principales de nuestro equipo:
           </p>
         </div>
 

@@ -27,7 +27,7 @@ function HeroSection() {
       <div className="relative z-10 text-center text-black px-4 max-w-5xl mx-auto">
         <div className="mb-6">
           <div className="inline-block px-6 py-2 bg-gradient-to-r from-emerald-500 via-cyan-500 to-fuchsia-500 border border-cyan-500/30 rounded-full mb-8">
-            <span className="text-white" >F1 IN SCHOOLS - CATEGORÍA PROFESIONAL</span>
+            <span className="text-white" >STEM RACING - CATEGORÍA PROFESIONAL</span>
           </div>
         </div>
         <h1 className="text-6xl md:text-8xl mb-6 tracking-tight text-white" style={{ fontFamily: 'Orbitron, sans-serif', fontWeight: '800', letterSpacing: '0.05em' }}>
@@ -69,11 +69,11 @@ function AboutSummary() {
           <img src={colibriLogo} alt="Colibrí Racing Logo" className="mx-auto" />
         </div>
         <div className="text-center md:text-left">
-          <h2 className="text-4xl md:text-5xl mb-6 text-black">Sobre Nosotros</h2>
+          <h2 className="text-4xl md:text-5xl mb-6 text-black">Sobre Nosotras</h2>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto md:mx-0 mb-8">
-            Somos un equipo de alumnas españolas apasionadas por la ingeniería y la competición. Participamos en F1 in Schools, donde diseñamos, fabricamos y competimos con coches en miniatura impulsados por cartuchos de CO₂, demostrando que la innovación no tiene límites.
+            Somos un equipo de 6 alumnas unidas por nuestra pasión por la ingeniería, la aerodinámica y los coches. Participamos en STEM racing, un proyecto que nos ha motivado a crear el coche más rápido e innovador posible. Estamos deseando dar el primer paso en nuestro viaje: la Competición Regional. Estos son los valores principales de nuestro equipo:
           </p>
-          <Link to="/about" className="px-8 py-4 bg-gradient-to-r from-[#ef4444] via-[#f97316] to-[#eab308] hover:from-[#dc2626] hover:via-[#ea580c] hover:to-[#ca8a04] text-black rounded-lg transition-all shadow-lg shadow-[#f97316]/30">
+          <Link to="/about" className="px-8 py-4 bg-gradient-to-r from-emerald-500 via-cyan-500 to-fuchsia-500 hover:from-emerald-600 hover:via-cyan-600 hover:to-fuchsia-600 text-white rounded-lg transition-all shadow-lg shadow-cyan-500/50">
             Conoce más
           </Link>
         </div>
@@ -107,7 +107,7 @@ function TeamSummary() {
             </div>
           ))}
         </div>
-        <Link to="/team" className="px-8 py-4 bg-gradient-to-r from-[#ef4444] via-[#f97316] to-[#eab308] hover:from-[#dc2626] hover:via-[#ea580c] hover:to-[#ca8a04] text-black rounded-lg transition-all shadow-lg shadow-[#f97316]/30">
+        <Link to="/team" className="px-8 py-4 bg-gradient-to-r from-emerald-500 via-cyan-500 to-fuchsia-500 hover:from-emerald-600 hover:via-cyan-600 hover:to-fuchsia-600 text-white rounded-lg transition-all shadow-lg shadow-cyan-500/50">
           Conoce al equipo
         </Link>
       </div>
@@ -142,7 +142,7 @@ function CarSummary() {
               );
             })}
           </div>
-          <Link to="/car" className="px-8 py-4 bg-gradient-to-r from-[#ef4444] via-[#f97316] to-[#eab308] hover:from-[#dc2626] hover:via-[#ea580c] hover:to-[#ca8a04] text-black rounded-lg transition-all shadow-lg shadow-[#f97316]/30">
+          <Link to="/car" className="px-8 py-4 bg-gradient-to-r from-emerald-500 via-cyan-500 to-fuchsia-500 hover:from-emerald-600 hover:via-cyan-600 hover:to-fuchsia-600 text-white rounded-lg transition-all shadow-lg shadow-cyan-500/50">
             Descubre el coche
           </Link>
         </div>
@@ -175,7 +175,7 @@ function SponsorsSummary() {
             </div>
           ))}
         </div>
-        <Link to="/sponsors" className="px-8 py-4 bg-gradient-to-r from-[#ef4444] via-[#f97316] to-[#eab308] hover:from-[#dc2626] hover:via-[#ea580c] hover:to-[#ca8a04] text-black rounded-lg transition-all shadow-lg shadow-[#f97316]/30">
+        <Link to="/sponsors" className="px-8 py-4 bg-gradient-to-r from-emerald-500 via-cyan-500 to-fuchsia-500 hover:from-emerald-600 hover:via-cyan-600 hover:to-fuchsia-600 text-white rounded-lg transition-all shadow-lg shadow-cyan-500/50">
           Conviértete en patrocinador
         </Link>
       </div>

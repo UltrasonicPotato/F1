@@ -13,7 +13,7 @@ export function Footer() {
               <span className="text-xl" style={{ fontFamily: 'Orbitron, sans-serif' }}>Colibrí Racing</span>
             </div>
             <p className="text-gray-500">
-              Un equipo español de alumnas compitiendo en F1 in Schools, impulsando la innovación y el talento STEM.
+              Un equipo español de alumnas compitiendo en STEM racing, impulsando la innovación y el talento STEM.
             </p>
           </div>
 
