@@ -1,7 +1,7 @@
 import { ChevronDown, Target, Users, Zap, Gauge, Wind, Weight } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Link } from 'react-router-dom';
-import heroBackground from '../assets/hero-background.jpg';
+import heroBg from '../../test2/car.png';
 import colibriLogo from '../assets/colibri.colored.logo.jpg';
 
 function HeroSection() {
@@ -15,11 +15,11 @@ function HeroSection() {
   return (
     <section id="hero-section" className="relative h-screen flex items-center justify-center overflow-hidden bg-white">
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroBackground}
-          alt="Racing Car Background"
-          className="w-full h-full object-cover animate-ken-burns"
-          style={{ filter: 'brightness(0.7)' }}
+        <ImageWithFallback
+          src={heroBg}
+          alt="F1 Racing"
+          className="w-full h-full object-cover"
+          style={{ filter: 'blur(8px)' }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/70 to-white/95 mix-blend-overlay"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-[#ef4444]/10 via-[#f97316]/10 to-[#eab308]/10"></div>
