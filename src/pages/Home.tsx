@@ -1,7 +1,7 @@
 import { ChevronDown, Target, Users, Zap, Gauge, Wind, Weight } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Link } from 'react-router-dom';
-import heroBg from '../../test2/car.png';
+import heroVideo from '../assets/hero-video.mp4';
 import colibriLogo from '../assets/colibri.colored.logo.jpg';
 
 function HeroSection() {
@@ -15,13 +15,17 @@ function HeroSection() {
   return (
     <section id="hero-section" className="relative h-screen flex items-center justify-center overflow-hidden bg-white">
       <div className="absolute inset-0 z-0">
-        <ImageWithFallback
-          src={heroBg}
-          alt="F1 Racing"
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover"
-          style={{ filter: 'blur(8px)' }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/70 to-white/95"></div>
+          style={{ filter: 'brightness(0.7)' }}
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/70 to-white/95 mix-blend-overlay"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-[#ef4444]/10 via-[#f97316]/10 to-[#eab308]/10"></div>
       </div>
       <div className="relative z-10 text-center text-black px-4 max-w-5xl mx-auto">
@@ -34,7 +38,7 @@ function HeroSection() {
           COLIBRÍ RACING
         </h1>
         <p className="text-xl md:text-2xl text-white mb-12 max-w-3xl mx-auto" style={{ fontFamily: 'Rajdhani, sans-serif', fontWeight: '500' }}>
-          Mas rapido que un parpadeo, tan presico como un colibri
+          Más rápido que un parpadeo, tan preciso como un colibrí
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
