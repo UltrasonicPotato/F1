@@ -1,4 +1,4 @@
-import { ChevronDown, Target, Users, Zap, Gauge, Wind, Weight } from 'lucide-react';
+import { ChevronDown, Gauge, Wind, Weight } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Link } from 'react-router-dom';
 import heroBg from '../../test2/car.png';

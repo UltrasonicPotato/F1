@@ -1,36 +1,14 @@
-import { Gauge, Wind, Zap, Weight, ChevronDown } from 'lucide-react';
+import { Gauge, Wind, Zap } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../components/ui/carousel';
 import prototype1 from '../assets/prototype1.png';
 import prototype2 from '../assets/prototype2.png';
+import autodeskLogo from '../assets/autodesk-fusion-logo.png';
+import ansysLogo from '../assets/ansys-logo.png';
+import carTemporary from '../assets/car-temporary.jpg';
 
 export function CarPage() {
-  const specs = [
-    { icon: Gauge, label: 'Velocidad', value: '65+ km/h' },
-    { icon: Wind, label: 'Coef. Drag', value: '0.18' },
-    { icon: Weight, label: 'Peso', value: '55g' },
-    { icon: Zap, label: 'Potencia', value: 'CO₂ 8g' },
-  ];
-
-  const features = [
-    {
-      title: 'Diseño Aerodinámico',
-      description: 'Optimizado mediante simulaciones CFD para minimizar la resistencia al aire y maximizar la velocidad.',
-    },
-    {
-      title: 'Fabricación CNC',
-      description: 'Mecanizado de precisión en balsa y materiales compuestos para garantizar un acabado perfecto.',
-    },
-    {
-      title: 'Testing Riguroso',
-      description: 'Pruebas exhaustivas en túnel de viento y pista de competición para validar el rendimiento.',
-    },
-    {
-      title: 'Innovación Constante',
-      description: 'Iteraciones continuas del diseño basadas en datos y análisis de rendimiento.',
-    },
-  ];
 
   return (
     <section className="py-24 px-4 bg-white relative overflow-hidden">
@@ -50,7 +28,7 @@ export function CarPage() {
         {/* Car Image */}
         <div className="mb-16 rounded-2xl overflow-hidden border border-gray-200 shadow-2xl shadow-cyan-500/20">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1760012827122-2b467fa76d38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZXJvZHluYmmyUyMGRlc2lnbiUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzY1MzgwOTg3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            src={carTemporary}
             alt="Colibrí Racing Car"
             className="w-full h-[500px] object-cover"
           />
@@ -89,8 +67,7 @@ export function CarPage() {
                     </div>
                     {/* Placeholder for Inspo-style Image/Visual */}
                     <div className="rounded-xl overflow-hidden bg-gray-200 h-full min-h-[300px] flex items-center justify-center relative">
-                      <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20"></div>
-                      <span className="relative text-gray-400 font-medium italic">[Espacio para imagen ilustrativa]</span>
+                      <img src={carTemporary} alt="Proceso de diseño" className="w-full h-full object-cover" />
                     </div>
                   </div>
                 </div>
@@ -99,16 +76,18 @@ export function CarPage() {
                   <h4 className="font-bold text-black mb-6 uppercase tracking-wide text-lg border-l-4 border-cyan-500 pl-3">Programas utilizados</h4>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                     <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                      <div className="h-12 mb-4 flex items-center">
+                        <img src={autodeskLogo} alt="Autodesk Fusion 360" className="h-full object-contain" />
+                      </div>
                       <h5 className="font-bold text-black mb-2">Autodesk Fusion 360</h5>
                       <p className="text-sm text-gray-600">Herramienta principal CAD para modelado de formas orgánicas y piezas mecánicas con alta precisión.</p>
                     </div>
                     <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                      <div className="h-12 mb-4 flex items-center">
+                        <img src={ansysLogo} alt="Ansys Discovery" className="h-full object-contain" />
+                      </div>
                       <h5 className="font-bold text-black mb-2">Ansys Discovery</h5>
                       <p className="text-sm text-gray-600">Simulaciones CFD para visualizar flujo de aire, identificar resistencia y optimizar el perfil virtualmente.</p>
-                    </div>
-                    <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                      <h5 className="font-bold text-black mb-2">Bambu Studio</h5>
-                      <p className="text-sm text-gray-600">Laminado para impresión 3D, crítico para traducir diseños digitales en prototipos tangibles.</p>
                     </div>
                   </div>
                 </div>
