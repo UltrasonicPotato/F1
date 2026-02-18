@@ -1,5 +1,7 @@
 import { Mail, Instagram, Linkedin, MapPin } from 'lucide-react';
 import { useState } from 'react';
+import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import aboutBg from '../assets/about-bg.jpg';
 
 export function ContactPage() {
   const [formData, setFormData] = useState({
@@ -29,15 +31,21 @@ export function ContactPage() {
 
   return (
     <section className="py-24 px-4 bg-white relative overflow-hidden">
+      <ImageWithFallback
+        src={aboutBg}
+        alt="Contact background"
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ filter: 'blur(8px)' }}
+      />
       {/* Decorative gradients */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-fuchsia-500/10 rounded-full blur-3xl"></div>
-      
+
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-5xl mb-6 text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-fuchsia-400">Contacto</h2>
+          <h2 className="text-5xl mb-6 text-white">Contacto</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-fuchsia-500 mx-auto mb-8"></div>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+          <p className="text-xl text-white max-w-3xl mx-auto">
             ¿Tienes alguna pregunta o quieres colaborar con nosotras? ¡Nos encantaría saber de ti!
           </p>
         </div>
@@ -61,7 +69,7 @@ export function ContactPage() {
                   required
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="email" className="block text-gray-700 mb-2">
                   Email
@@ -76,7 +84,7 @@ export function ContactPage() {
                   required
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="message" className="block text-gray-700 mb-2">
                   Mensaje
@@ -91,7 +99,7 @@ export function ContactPage() {
                   required
                 ></textarea>
               </div>
-              
+
               <button
                 type="submit"
                 className="w-full px-8 py-4 bg-gradient-to-r from-emerald-500 via-cyan-500 to-fuchsia-500 hover:from-emerald-600 hover:via-cyan-600 hover:to-fuchsia-600 text-white rounded-lg transition-all shadow-lg shadow-cyan-500/30"

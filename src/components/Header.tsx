@@ -22,6 +22,15 @@ export function Header() {
           { id: 'about-hero', color: 'text-white' },
           { id: 'about-values', color: 'text-black' },
         ];
+      } else if (pathname === '/about') {
+        sections = [
+          { id: 'about-hero', color: 'text-white' },
+          { id: 'about-values', color: 'text-black' },
+        ];
+      } else if (pathname === '/sponsors' || pathname === '/contact') {
+        // These pages now have a full-screen background image, so start with white text
+        setTextColor('text-white');
+        return;
       } else {
         setTextColor('text-black');
         return;
@@ -44,7 +53,7 @@ export function Header() {
           }
         }
       }
-      
+
       setTextColor(newColor);
     };
 

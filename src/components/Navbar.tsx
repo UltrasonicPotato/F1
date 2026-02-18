@@ -17,9 +17,13 @@ export function Navbar({ textColor }: { textColor: string }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  
-  const logo = textColor === 'text-white' ? whiteLogo : blackLogo;
-  const logoTextColor = textColor;
+
+  // Force black text when scrolled (because background becomes white)
+  // Otherwise use the passed textColor
+  const displayedTextColor = isScrolled ? 'text-black' : textColor;
+
+  const logo = displayedTextColor === 'text-white' ? whiteLogo : blackLogo;
+  const logoTextColor = displayedTextColor;
 
   const navItems = [
     { label: 'Inicio', to: '/' },
@@ -32,9 +36,8 @@ export function Navbar({ textColor }: { textColor: string }) {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled || textColor !== 'text-white' ? 'bg-white/95 backdrop-blur-md shadow-lg shadow-gray-500/10' : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || textColor !== 'text-white' ? 'bg-white/95 backdrop-blur-md shadow-lg shadow-gray-500/10' : 'bg-transparent'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
@@ -50,7 +53,7 @@ export function Navbar({ textColor }: { textColor: string }) {
               <Link
                 key={item.label}
                 to={item.to}
-                className={`transition-all ${textColor} hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-emerald-400 hover:to-cyan-400`}
+                className={`transition-all ${displayedTextColor} hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-emerald-400 hover:to-cyan-400`}
               >
                 {item.label}
               </Link>
@@ -60,7 +63,7 @@ export function Navbar({ textColor }: { textColor: string }) {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden p-2 ${textColor}`}
+            className={`md:hidden p-2 ${displayedTextColor}`}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -74,7 +77,7 @@ export function Navbar({ textColor }: { textColor: string }) {
                 key={item.label}
                 to={item.to}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`block w-full text-left px-4 py-3 transition-colors ${textColor} hover:bg-gray-100 hover:text-cyan-400`}
+                className={`block w-full text-left px-4 py-3 transition-colors ${displayedTextColor} hover:bg-gray-100 hover:text-cyan-400`}
               >
                 {item.label}
               </Link>
