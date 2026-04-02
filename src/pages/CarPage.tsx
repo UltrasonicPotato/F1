@@ -7,11 +7,25 @@ import prototype2 from '../assets/prototype2.png';
 import autodeskLogo from '../assets/autodesk-fusion-logo.png';
 import ansysLogo from '../assets/ansys-logo.png';
 import carTemporary from '../assets/car-temporary.jpg';
+import aboutBg from '../assets/about-bg.jpg';
 
 export function CarPage() {
 
   return (
-    <section className="py-24 px-4 bg-white relative overflow-hidden">
+    <>
+      {/* Hero Image Section */}
+      <section className="relative h-screen w-full overflow-hidden">
+        <ImageWithFallback
+          src={aboutBg}
+          alt="Car page background space"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ filter: 'blur(8px)' }}
+        />
+        {/* Soft gradient overlay to blend into the section below */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-white"></div>
+      </section>
+
+      <section className="py-24 px-4 bg-white relative overflow-hidden">
       {/* Decorative gradients */}
       <div className="absolute top-0 right-1/3 w-96 h-96 bg-fuchsia-500/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"></div>
@@ -23,15 +37,6 @@ export function CarPage() {
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             Un diseño revolucionario que combina aerodinámica de vanguardia con ingeniería de precisión.
           </p>
-        </div>
-
-        {/* Car Image */}
-        <div className="mb-16 rounded-2xl overflow-hidden border border-gray-200 shadow-2xl shadow-cyan-500/20">
-          <ImageWithFallback
-            src={carTemporary}
-            alt="Colibrí Racing Car"
-            className="w-full h-[500px] object-cover"
-          />
         </div>
 
         <Accordion type="single" collapsible className="w-full max-w-4xl mx-auto">
@@ -141,5 +146,6 @@ export function CarPage() {
         </Accordion>
       </div>
     </section>
+    </>
   );
 }

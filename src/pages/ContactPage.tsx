@@ -9,11 +9,39 @@ export function ContactPage() {
     email: '',
     message: '',
   });
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Aquí se implementaría el envío del formulario
-    alert('Formulario enviado (funcionalidad de ejemplo)');
+    setStatus('submitting');
+    
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/colibri.racingf1@gmail.com", {
+        method: "POST",
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          Nombre: formData.name,
+          Email: formData.email,
+          Mensaje: formData.message,
+          _subject: `Nuevo mensaje en la web de: ${formData.name}`,
+        })
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+        setTimeout(() => setStatus('idle'), 8000);
+      } else {
+        setStatus('error');
+        setTimeout(() => setStatus('idle'), 5000);
+      }
+    } catch (error) {
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 5000);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -102,10 +130,22 @@ export function ContactPage() {
 
               <button
                 type="submit"
-                className="w-full px-8 py-4 bg-gradient-to-r from-emerald-500 via-cyan-500 to-fuchsia-500 hover:from-emerald-600 hover:via-cyan-600 hover:to-fuchsia-600 text-white rounded-lg transition-all shadow-lg shadow-cyan-500/30"
+                disabled={status === 'submitting'}
+                className="w-full px-8 py-4 bg-gradient-to-r from-emerald-500 via-cyan-500 to-fuchsia-500 hover:from-emerald-600 hover:via-cyan-600 hover:to-fuchsia-600 text-white rounded-lg transition-all shadow-lg shadow-cyan-500/30 disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                Enviar Mensaje
+                {status === 'submitting' ? 'Enviando...' : 'Enviar Mensaje'}
               </button>
+              
+              {status === 'success' && (
+                <div className="p-4 bg-emerald-100 text-emerald-800 border border-emerald-200 rounded-lg text-center font-medium mt-4">
+                  ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.
+                </div>
+              )}
+              {status === 'error' && (
+                <div className="p-4 bg-red-100 text-red-800 border border-red-200 rounded-lg text-center font-medium mt-4">
+                  Hubo un error al enviar el mensaje. Por favor, inténtalo más tarde o envíanos un correo directamente.
+                </div>
+              )}
             </form>
           </div>
 
