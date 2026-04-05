@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import whiteLogo from '../../test2/white.logo.png';
 import blackLogo from '../../test2/black.logo.png';
 
 export function Navbar({ textColor }: { textColor: string }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { pathname } = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {

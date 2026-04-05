@@ -1,4 +1,4 @@
-import { ChevronDown, Gauge, Wind, Weight } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Link } from 'react-router-dom';
 import heroBg from '../../test2/car.png';
@@ -125,11 +125,7 @@ function TeamSummary() {
 }
 
 function CarSummary() {
-  const specs = [
-    { icon: Gauge, label: 'Velocidad', value: '65+ km/h' },
-    { icon: Wind, label: 'Coef. Drag', value: '0.18' },
-    { icon: Weight, label: 'Peso', value: '55g' },
-  ];
+
 
   return (
     <section id="car-summary" className="py-24 px-4 bg-white text-black">
@@ -169,35 +165,7 @@ function CarSummary() {
   );
 }
 
-function SponsorsSummary() {
-  const sponsors = [
-    { name: 'Tu Empresa Aquí', logo: '🏢' },
-    { name: 'Empresa 1', logo: '🔷' },
-    { name: 'Empresa 2', logo: '⚪' },
-  ];
 
-  return (
-    <section id="sponsors-summary" className="py-24 px-4 bg-gray-50 text-black">
-      <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl mb-6 text-black font-bold">Nuestros Patrocinadores</h2>
-        <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-12">
-          Gracias a nuestros patrocinadores por hacer posible este proyecto.
-          Ofrecemos niveles de patrocinio (Oro, Plata, Bronce) adaptados a tus necesidades.
-        </p>
-        <div className="grid grid-cols-3 gap-8 mb-12 max-w-lg mx-auto">
-          {sponsors.map((sponsor, index) => (
-            <div key={index} className="bg-gray-100 p-8 rounded-xl border border-gray-200 flex items-center justify-center">
-              <span className="text-4xl">{sponsor.logo}</span>
-            </div>
-          ))}
-        </div>
-        <Link to="/sponsors" className="px-8 py-4 bg-gradient-to-r from-emerald-500 via-cyan-500 to-fuchsia-500 hover:from-emerald-600 hover:via-cyan-600 hover:to-fuchsia-600 text-white rounded-lg transition-all shadow-lg shadow-cyan-500/50">
-          Conviértete en patrocinador
-        </Link>
-      </div>
-    </section >
-  );
-}
 
 
 export function HomePage() {
@@ -207,7 +175,6 @@ export function HomePage() {
       <AboutSummary />
       <TeamSummary />
       <CarSummary />
-      <SponsorsSummary />
     </div>
   );
 }

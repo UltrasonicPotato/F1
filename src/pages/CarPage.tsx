@@ -47,16 +47,16 @@ export function CarPage() {
           {/* Feature Boxes */}
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4" style={{ marginBottom: '260px' }}>
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 shadow-lg shadow-gray-200/50 hover:shadow-cyan-500/10 transition-shadow">
-              <h3 className="text-xl font-bold text-black mb-4">Característica 1</h3>
-              <p className="text-gray-600">Aquí puedes añadir el texto explicativo sobre el coche final. Este es un texto de relleno temporal.</p>
+              <h3 className="text-xl font-bold text-black mb-4">Aerodinámica Optimizada</h3>
+              <p className="text-gray-600">El perfil ha sido diseñado mediante simulaciones CFD para minimizar la resistencia aerodinámica (drag) y facilitar el paso del aire alrededor del monoplaza, maximizando su aceleración inicial.</p>
             </div>
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 shadow-lg shadow-gray-200/50 hover:shadow-cyan-500/10 transition-shadow">
-              <h3 className="text-xl font-bold text-black mb-4">Característica 2</h3>
-              <p className="text-gray-600">Espacio reservado para más detalles del modelo definitivo, innovaciones destacadas o sus estadísticas.</p>
+              <h3 className="text-xl font-bold text-black mb-4">Distribución de Masa</h3>
+              <p className="text-gray-600">Mediante la reducción estratégica de la masa manteniendo la integridad y rigidez estructural, garantizamos que nuestro vehículo mantenga un peso óptimo y un centro de gravedad competitivo.</p>
             </div>
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 shadow-lg shadow-gray-200/50 hover:shadow-cyan-500/10 transition-shadow">
-              <h3 className="text-xl font-bold text-black mb-4">Característica 3</h3>
-              <p className="text-gray-600">Último bloque para completar la información clave del coche final antes de pasar a la sección de desarrollo.</p>
+              <h3 className="text-xl font-bold text-black mb-4">Fabricación de Precisión</h3>
+              <p className="text-gray-600">La integración de conformado CNC y manufactura aditiva nos permite realizar directamente los diseños virtuales a la pista preservando las más altas exigencias de tolerancias en todas las piezas.</p>
             </div>
           </div>
         </div>

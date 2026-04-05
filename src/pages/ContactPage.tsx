@@ -1,4 +1,4 @@
-import { Mail, Instagram, Linkedin, MapPin } from 'lucide-react';
+import { Mail, Instagram, MapPin } from 'lucide-react';
 import { useState } from 'react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import aboutBg from '../assets/about-bg.jpg';
